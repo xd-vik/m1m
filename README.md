@@ -31,13 +31,12 @@ bringing unique skills and perspectives to the development of our Learning Manag
 
 • Lead Developer: [Vivek] - Oversees the technical development of the platform.
 
-• Frontend Developer: [Aman Singh, Manish Nagar, Priyanshu Gupta, Rana Bhavesh, Sachin
-Singh] - Designs and implements the user interface.
+• Frontend & UI/UX : [Priya Dwivedi, Aman Singh, Manish Nagar, Sachin Singh] - Designs and implements the user interface.
 
-• Backend Developer: [Vishal Pandey, Vivek Kushwaha, Abhijeet Singh, Ravindra Gupta] -
+• Backend Developer: [Vishal Pandey, Vivek, Abhijeet Singh, Rana Bhawesh] -
 Responsible for server-side logic and database management.
 
-• UI/UX Designer: [Priya Dwivedi] - Focuses on user experience and interface design.
+• Non-Coding [Documentation,PPTs,Reports,...]: [Ravindra Gupta, Priyanshu Gupta] - Focuses on user experience and interface design.
 
 ## Features
 
