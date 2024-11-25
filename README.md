@@ -13,9 +13,9 @@
     <br /><br />
     <a href="https://mission1m.vercel.app/">View Live</a>
      · 
-    <a href="https://github.com/xd-vik/mission1m/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/xd-vik/m1m/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
-    <a href="https://github.com/xd-vik/mission1m/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/xd-vik/m1m/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
@@ -78,7 +78,7 @@ Responsible for server-side logic and database management.
 - Clone this repository
 
 ```bash
-git clone https://github.com/xd-vik/mission1m.git
+git clone https://github.com/xd-vik/m1m.git
 ```
 
 - Install/Update the necessary dependencies
@@ -99,15 +99,17 @@ We welcome contributions from everyone.
 
 1. Fork the repository.
 2. Clone the forked repo to your local machine.
-3. Setup the Project Locally (eg. npm i)
+3. Setup the Project Locally (eg. npm install)
 4. Setup Upstream to directly sync with xd-vik/youtube master branch.
 
-- git remote add upstream https://github.com/xd-vik/mission one million.git
+```bash
+git remote add upstream https://github.com/xd-vik/m1m.git
+```
 
 5. Setup your origin for pushing to your Forked Repo
 
 ```bash
-git remote set-url origin `your-git-url`
+git remote add origin `your-git-url`
 
 git remote -v # confirm the changes
 ```
@@ -128,13 +130,13 @@ git push
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/xd-vik/mission1m.svg?style=for-the-badge
-[contributors-url]: https://github.com/xd-vik/mission1m/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/xd-vik/mission1m.svg?style=for-the-badge
-[forks-url]: https://github.com/xd-vik/mission1m/network/members
-[stars-shield]: https://img.shields.io/github/stars/xd-vik/mission1m.svg?style=for-the-badge
-[stars-url]: https://github.com/xd-vik/mission1m/stargazers
-[issues-shield]: https://img.shields.io/github/issues/xd-vik/mission1m.svg?style=for-the-badge
-[issues-url]: https://github.com/xd-vik/mission1m/issues
-[license-shield]: https://img.shields.io/github/license/xd-vik/mission1m.svg?style=for-the-badge
-[license-url]: https://github.com/xd-vik/mission1m/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/xd-vik/m1m.svg?style=for-the-badge
+[contributors-url]: https://github.com/xd-vik/m1m/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/xd-vik/m1m.svg?style=for-the-badge
+[forks-url]: https://github.com/xd-vik/m1m/network/members
+[stars-shield]: https://img.shields.io/github/stars/xd-vik/m1m.svg?style=for-the-badge
+[stars-url]: https://github.com/xd-vik/m1m/stargazers
+[issues-shield]: https://img.shields.io/github/issues/xd-vik/m1m.svg?style=for-the-badge
+[issues-url]: https://github.com/xd-vik/m1m/issues
+[license-shield]: https://img.shields.io/github/license/xd-vik/m1m.svg?style=for-the-badge
+[license-url]: https://github.com/xd-vik/m1m/blob/master/LICENSE.txt
