@@ -5,7 +5,7 @@
     "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
     "start-backend": "cd server && npm start",
     "start-frontend": "cd client && npm run dev",
-    "update": "concurrently \"npm run update-backend\" \"npm run update-frontend\" \"npm run root-dev\"",
+    "upd": "concurrently \"npm run update-backend\" \"npm run update-frontend\" \"npm run root-dev\"",
     "update-backend": "cd server && npm install",
     "update-frontend": "cd client && npm install",
     "root-dev": "npm install"
