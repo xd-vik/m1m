@@ -83,7 +83,7 @@ git clone https://github.com/xd-vik/m1m.git
 - Install/Update the necessary dependencies
 
 ```bash
-npm update
+npm run upd
 ```
 
 - Start the application
