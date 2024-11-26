@@ -16,11 +16,11 @@ app.use(
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
+app.use("/", (req, res) => {
   res.json({ success: true, message: "Backend is live from vercel" });
 });
 
-app.get("/test", (req, res) => {
+app.use("/test", (req, res) => {
   res.json({ message: "Test Api hits" });
 });
 
