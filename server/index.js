@@ -17,11 +17,11 @@ app.use(
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("Hello From Backend!");
+  res.json({ success: true, message: "Backend is live from vercel" });
 });
 
 app.get("/test", (req, res) => {
-  res.send("good to go");
+  res.json({ message: "Test Api hits" });
 });
 
 mongoose
