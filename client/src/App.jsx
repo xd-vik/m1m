@@ -9,9 +9,7 @@ import Router from "./React-Router/Router";
 function App() {
   return (
     <>
-      
        <Router />
-      
     </>
   );
 }
