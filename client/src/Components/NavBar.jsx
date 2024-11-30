@@ -16,8 +16,8 @@ const NavBar=()=>{
             <Link className='p-5 m-2'to='/contact'>Contact Us</Link>
           </div>
           <div className='w-[20%] flex justify-center items-center gap-10 h-[10vh]'>
-            <Link className='px-5 py-2 rounded-lg text-[1.34rem] text-[#015DFE] border-2 border-[#015DFE] font-semibold hover:bg-blue-700 hover:text-white'>Sign-in</Link>
-            <Link className='px-5 py-2 text-[1.34rem] bg-[#015DFE] text-white rounded-lg font-semibold hover:bg-blue-700'>Login</Link>
+            <Link to='/SignUp' className='px-5 py-2 rounded-lg text-[1.34rem] text-[#015DFE] border-2 border-[#015DFE] font-semibold hover:bg-blue-700 hover:text-white'>Sign-in</Link>
+            <Link to='/Login' className='px-5 py-2 text-[1.34rem] bg-[#015DFE] text-white rounded-lg font-semibold hover:bg-blue-700'>Login</Link>
           </div>
         </div>
       </nav>
