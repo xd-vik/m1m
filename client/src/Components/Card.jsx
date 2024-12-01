@@ -4,8 +4,8 @@ const Card=({data})=>{
     return(
         <>
         <Link>
-            <div className='w-[18vw] m-5 h-[35vh] transition duration-300 ease-in-ease-out rounded-lg bg-white border-2 border-[#cccccc] hover:scale-125 shadow-lg'>
-                <div className='w-full h-[45%]'>
+            <div className='w-[18vw] m-5 h-[35vh]  transition duration-300 ease-in-ease-out rounded-lg border-2 border-[#cccccc] hover:scale-125 shadow-lg'>
+                <div className='w-full h-[55%]'>
                     <img src={data.image} alt="" className='w-full h-full object-contain rounded-lg'/>
                 </div>
                 <div className='flex flex-col items-center justify-center'>
