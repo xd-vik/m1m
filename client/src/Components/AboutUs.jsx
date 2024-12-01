@@ -50,7 +50,7 @@ const AboutUs = () => {
                     <i class="ri-checkbox-circle-line text-[2.3rem] font-light mx-2"></i>
                     {data.title}
                   </h1>
-                  <p className="text-[1.25em] leading-1 text-[#122766] mx-12 w-[80%] hover:text-blue-500">{data.description}</p>
+                  <p className="text-[1.25em] leading-1 text-[#122766] mx-12 w-[80%]">{data.description}</p>
                 </>
               )
             })}
