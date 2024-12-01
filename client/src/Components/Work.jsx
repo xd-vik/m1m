@@ -8,22 +8,22 @@ const WorkData=[
     {
         title:'1.Choose Your Course',
         description:'Browse our wide selection of high-quality courses across various fields from tech and business to creative arts and personal development.',
-        image:'../../public/images/girlLaptop.jpg',
+        image:'/public/images/girlLaptop.jpg',
     },
     {
         title:'2.Enroll & Learn',
         description:'After signing up, dive into your course materials and start your learning journey at your own pace.',
-        image:'../../public/images/enroll.webp',
+        image:'/public/images/enroll.webp',
     },
     {
         title:'3.Completion',
         description:'Engage with the content, complete assignments, and demonstrate your understanding of the subject matter.',
-        image:'../../public/images/boyLaptop.webp',
+        image:'/public/images/boyLaptop.webp',
     },
     {
         title:'4.Get Your Money ',
         description:'Upon successful completion of the course, you will receive a full refund of the money you paid. ',
-        image:'../../public/images/money.webp',
+        image:'/public/images/money.webp',
     }
 ]
 const Work=()=>{
