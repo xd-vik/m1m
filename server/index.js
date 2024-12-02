@@ -1,12 +1,15 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const mongoose = require("mongoose");
+const bodyParser = require('body-parser')
 require("dotenv").config();
+require('../server/Models/db')
+const CourseRouter = require('../server/Routes/CourseRouter')
+const AuthRouter = require('../server/Routes/AuthRouter')
 
 const PORT = process.env.PORT || 3000;
 const allowedOrigin = process.env.ORIGIN || "*";
-const DB_URI = process.env.DB_URI;
+// const DB_URI = process.env.DB_URI;
 
 app.use(
   cors({
@@ -24,10 +27,13 @@ app.get("/test", (req, res) => {
   res.send("good to go");
 });
 
-mongoose
-  .connect(DB_URI)
-  .then(() => console.log("Database is Connected"))
-  .catch((e) => console.log(e));
+app.use(bodyParser.json());
+app.use(cors());
+app.use('/auth',AuthRouter)
+
+app.use('/course',CourseRouter)
+
+
 
 app.listen(PORT, () => {
   console.log(`server is running at http://localhost:${PORT}`);
