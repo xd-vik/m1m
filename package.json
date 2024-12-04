@@ -8,10 +8,12 @@
     "upd": "concurrently \"npm run update-backend\" \"npm run update-frontend\" \"npm run root-dev\"",
     "update-backend": "cd server && npm install",
     "update-frontend": "cd client && npm install",
+    "dev":"vite",
     "root-dev": "npm install"
   },
   "devDependencies": {
-    "concurrently": "^7.2.1"
+    "concurrently": "^7.2.1",
+    "vite": "^6.0.2"
   },
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.7.1",

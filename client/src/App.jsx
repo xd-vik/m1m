@@ -7,6 +7,7 @@ import AboutUs from "./Components/AboutUs";
 import HomePage from "./Pages/HomePage";
 import Footer from "./Components/Footer";
 import Router from "./React-Router/Router";
+
 function App() {
   return (
     <>
