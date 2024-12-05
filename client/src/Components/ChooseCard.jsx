@@ -4,7 +4,7 @@ const ChooseCard=({data})=>{
     return(
         <>
         <Link>
-            <div className='w-[16vw] m-1 h-[32vh] transition duration-300 ease-in-ease-out rounded-lg bg-white border-2 border-[#cccccc] hover:scale-110 shadow-lg'>
+            <div className='sm:w-[40vw] md:w-[22vw]  xl:w-[16vw] m-1 h-[32vh] transition duration-300 ease-in-ease-out rounded-lg bg-white border-2 border-[#cccccc] hover:scale-110 shadow-lg'>
                 <div className='w-full h-[76%] '>
                     <img src={data.image} alt="" className='w-full object-contain rounded-lg'/>
                 </div>

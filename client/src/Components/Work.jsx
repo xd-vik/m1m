@@ -66,9 +66,11 @@ const Work=()=>{
                     </div>
                 </div>
             </div>
-            <div className='w-[90%] h-[50vh] ml-[5%]'>
+
+        <div className='w-[90%] sm:h-[110vh] md:h-[80vh] lg:h-[80vh] xl:h-[50vh] h-[190vh] ml-[5%]'>
+>>>>>>>
                 <h1 className='text-[3.5em] font-semibold text-[#122766]'>Why Choose Us?</h1>
-                <div className='w-full flex flex-wrap justify-between h-[5vh] py-1'>
+                <div className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-between h-[45vh] py-1'>
                     {ChooseData.map((data,index)=>{
                         return(
                             <ChooseCard data={data} key={index}/>
