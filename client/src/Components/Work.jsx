@@ -66,9 +66,11 @@ const Work=()=>{
                     </div>
                 </div>
             </div>
-            <div className='w-[90%] h-[50vh] ml-[5%]'>
+
+        <div className='p-8'>
+
                 <h1 className='text-[3.5em] font-semibold text-[#122766]'>Why Choose Us?</h1>
-                <div className='w-full flex flex-wrap justify-between h-[5vh] py-1'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4'>
                     {ChooseData.map((data,index)=>{
                         return(
                             <ChooseCard data={data} key={index}/>
