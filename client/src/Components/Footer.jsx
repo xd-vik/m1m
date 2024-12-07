@@ -1,8 +1,5 @@
 import React from "react";
-import facebook from "../../public/images/facebook.png";
-import twitter from "../../public/images/twitter.png";
-import linkedin from "../../public/images/linkedin.png";
-import instagram from "../../public/images/logo4.png";
+
 
 const Footer = () => {
   return (
@@ -57,28 +54,28 @@ const Footer = () => {
           <div className="flex space-x-6 mr-20">
             <a href="#" className="hover:scale-110 transition-transform">
               <img
-                src={twitter}
+                src="/images/twitter.png"
                 alt="Twitter"
                 className="w-10 h-10"
               />
             </a>
             <a href="#" className="hover:scale-110 transition-transform">
               <img
-                src={facebook}
+                src="/images/facebook.png"
                 alt="Facebook"
                 className="w-10 h-10"
               />
             </a>
             <a href="#" className="hover:scale-110 transition-transform">
               <img
-                src={instagram}
+                src="/images/logo4.png"
                 alt="Instagram"
                 className="w-10 h-10"
               />
             </a>
             <a href="#" className="hover:scale-110 transition-transform">
               <img
-                src={linkedin}
+                src="/images/linkedin.png"
                 alt="LinkedIn"
                 className="w-10 h-10"
               />
