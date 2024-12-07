@@ -1,6 +1,8 @@
-import React from 'react';
-import { Link, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, Route, useNavigate } from 'react-router-dom';
 import logo from '../../public/images/logom1m.jpg'
+import {ToastContainer} from 'react-toastify'
+import {handleError, handleSuccess} from '../features/toast/utils'
 
 
 const Nav=[
@@ -22,6 +24,15 @@ const Nav=[
   }
 ]
 const NavBar=()=>{
+  const navigate = useNavigate();
+  const handleLogout=()=>{
+    localStorage.removeItem('token')
+    localStorage.removeItem('loggedInUser')
+    handleSuccess("logout successfully ")
+    navigate('/')
+  }
+
+  const user = localStorage.getItem('loggedInUser')
     return(
     <nav className='h-[10vh] w-full'>
         <div className='flex'>
@@ -38,8 +49,15 @@ const NavBar=()=>{
             })}
           </div>
           <div className='w-[20%] flex justify-center items-center gap-10 h-[10vh]'>
-            <Link to='/SignUp' className='px-5 py-2 rounded-lg text-[1.34rem] text-[#015DFE] border-2 border-[#015DFE] font-semibold hover:bg-blue-700 hover:text-white'>Sign-in</Link>
-            <Link to='/Login' className='px-5 py-2 text-[1.34rem] bg-[#015DFE] text-white rounded-lg font-semibold hover:bg-blue-700'>Login</Link>
+          
+          { user ? ( <> <button onClick={handleLogout} className='px-5 py-2 rounded-lg text-[1.34rem] text-[#015DFE] border-2 border-[#015DFE] font-semibold hover:bg-blue-700 hover:text-white'>Logout</button>
+                        <h3>{user}</h3>
+             </> ) : ( <> <button onClick={()=>{
+              navigate('/signup')
+            }} className='px-5 py-2 rounded-lg text-[1.34rem] text-[#015DFE] border-2 border-[#015DFE] font-semibold hover:bg-blue-700 hover:text-white'>Sign-Up</button>
+            <Link to='/Login' className='px-5 py-2 text-[1.34rem] bg-[#015DFE] text-white rounded-lg font-semibold hover:bg-blue-700'>Login</Link> </> )
+              }
+              <ToastContainer/>
           </div>
         </div>
       </nav>

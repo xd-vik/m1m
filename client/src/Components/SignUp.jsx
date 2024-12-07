@@ -1,10 +1,68 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser,faLock,faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import Sign from '../../public/images/SignUp1.png'
+import { handleError, handleSuccess } from "../features/toast/utils";
+import { ToastContainer } from "react-toastify";
 
 function SignUp() {
+
+        const navigate = useNavigate();
+
+        const [signupInfo,setSignupInfo] = useState({
+            name: '',
+            email:'',
+            password:''
+        });
+
+        const handleChange = (e)=>{
+            const {name,value} = e.target;
+            setSignupInfo((prev) =>({
+                ...prev,
+                [name]:value
+            }));
+        };
+
+        const handleSignup = async (e) =>{
+            e.preventDefault();
+            const { name, email, password } = signupInfo;
+    
+            if (!name || !email || !password) {
+                return handleError('All fields are required');
+            }
+    
+            try{
+                const url = "https://m1m-server.vercel.app/auth/signup";
+                const response = await fetch(url,{
+                    method: "POST",
+                    headers:{
+                        'content-type':"application/json"
+                    },
+                    body:JSON.stringify(signupInfo)
+                });
+                const result = await response.json()
+                const {success,message,jwtToken}=result;
+                if(success){
+                    handleSuccess(message);
+                    localStorage.setItem('token',jwtToken);
+                    localStorage.setItem('loggedInUser',name)
+                    setTimeout(()=>{
+                        navigate('/');
+                    }, 1000);
+
+                    // setTimeout(()=>{
+                    //     navigate('/');
+                    // },1000)
+                } else {
+                    handleError(message || 'signup failed');
+                }
+            }
+            catch(err){
+                handleError("An error occured . Please try later")
+            }
+        };
+
   return (
     <>
      <div className="bg-blue-100 h-screen w-screen py-1">
@@ -14,20 +72,23 @@ function SignUp() {
           </div>
           <div className="w-full max-w-md">
               <h2 className="text-3xl font-bold mb-6 md:ml-30 ml-32">Signup</h2>
-              <form>
+              <form onSubmit={handleSignup} >
                   <div className="mb-4">
-                      <label className="block text-gray-700 text-sm font-bold mb-2" for="fullName">
+                      <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
                           Full Name
                       </label>
                       <div className="relative">
                           <span className="absolute inset-y-0 left-0 flex items-center pl-3">
                           <FontAwesomeIcon icon={faUser} />
                           </span>
-                          <input className="shadow appearance-none border rounded-xl w-full py-2 px-3 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="fullName" type="text" placeholder="Enter your Full name" />
+                          <input 
+                          name="name"
+                          onChange={handleChange}
+                           className="shadow appearance-none border rounded-xl w-full py-2 px-3 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Enter your Full name" />
                       </div>
                   </div>
                   <div className="mb-4">
-                      <label className="block text-gray-700 text-sm font-bold mb-2" for="email">
+                      <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
                           Email
                       </label>
                       <div className="relative">
@@ -35,24 +96,31 @@ function SignUp() {
                           <FontAwesomeIcon icon={faEnvelope} />
                            
                           </span>
-                          <input className="shadow appearance-none border rounded-xl w-full py-2 px-3 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Enter your Email" />
+                          <input
+                          name="email"
+                          onChange={handleChange} 
+                           className="shadow appearance-none border rounded-xl w-full py-2 px-3 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Enter your Email" />
                       </div>
                   </div>
                   <div className="mb-6">
-                      <label className="block text-gray-700 text-sm font-bold mb-2" for="password">
+                      <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
                           Password
                       </label>
                       <div className="relative">
                           <span className="absolute inset-y-0 left-0 flex items-center pl-3 pb-2">
                           <FontAwesomeIcon icon={faLock} />
                           </span>
-                          <input className="shadow appearance-none border rounded-xl w-full py-2 px-3 pl-10 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Enter your Password" />
+                          <input 
+                          name="password"
+                          onChange={handleChange}
+                          className="shadow appearance-none border rounded-xl w-full py-2 px-3 pl-10 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Enter your Password" />
                       </div>
                   </div>
                   <div className="flex items-center justify-between">
-                      <button className="bg-blue-500 w-full rounded-2xl hover:bg-blue-700 text-white font-bold py-2 px-4  focus:outline-none focus:shadow-outline" type="button">
+                      <button className="bg-blue-500 w-full rounded-2xl hover:bg-blue-700 text-white font-bold py-2 px-4  focus:outline-none focus:shadow-outline" type="submit">
                           Signup
                       </button>
+                      <ToastContainer/>
                   </div>
               </form>
               <p className="mt-4 text-center text-gray-600">
