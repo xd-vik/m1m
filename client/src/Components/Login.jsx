@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Picture from '../../public/images/LoginPic.png'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser,faLock} from '@fortawesome/free-solid-svg-icons';
 import { ToastContainer } from "react-toastify";
@@ -62,7 +62,7 @@ const Login = ()=>{
   
       <div className="flex items-center justify-center flex-col md:flex-row bg-blue-50 shadow-lg rounded-lg overflow-hidden max-w-6xl mx-auto sm:my-10 md:my-60 lg:my-20 ">
           <div className="md:w-1/2 p-8 flex items-center justify-center bg-blue-50">
-              <img src={Picture} alt="Logo" className="w-full h-auto bg-blue-50" />
+              <img src="/images/LoginPic.png" alt="Logo" className="w-full h-auto bg-blue-50" />
           </div>
           <div className="md:w-1/2 w-full md:p-8 px-20 ">
               <h2 className="text-4xl font-bold md:ml-30 ml-32 mb-6">Login</h2>

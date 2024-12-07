@@ -1,8 +1,4 @@
 import React from "react";
-import about from "../../public/images/about.jpg";
-import man from "../../public/images/man.jpg";
-import woman from "../../public/images/woman.webp";
-
 const aboutData=[
   {
    title:"Everyday complete worksheet",
@@ -22,7 +18,7 @@ const AboutUs = () => {
     <>
     <div className='min-h-screen flex flex-col items-center justify-center w-full'>
       <div className='bg-red-300 w-full h-[60vh]'>
-        <img src={about} alt="" className="h-full w-full object-cover"/>
+        <img src="/images/about.jpg" alt="About" className="h-full w-full object-cover"/>
       </div>
       <div className="h-[40vh] w-[90vw] m-2">
         <h1 className='text-[3.5em] font-semibold text-[#122766]'>About Us</h1>
@@ -34,10 +30,10 @@ const AboutUs = () => {
           <h1 className='text-[3em] w-[40vw] font-semibold text-[#122766] m-6'>Interactive teaching our<br></br> online platforms</h1>
           <div className="relative flex items-center justify-center w-[80%] h-[50vh]">
             <div className="absolute w-[20vw] h-[50vh]">
-              <img src={man} alt="" className="w-full h-full object-cover"/>
+              <img src="/man/about.jpg" alt="" className="w-full h-full object-cover"/>
             </div>
             <div className="absolute inset-1/2 left-[55vh] top-[10vh] -rotate-30 w-[20vw] h-[50vh]">
-              <img src={woman} alt="" className="w-full h-full object-cover"/>
+              <img src="/images/woman.webp" alt="" className="w-full h-full object-cover"/>
             </div>
           </div>
         </div>

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Link, Route, useNavigate } from 'react-router-dom';
-import logo from '../../public/images/logom1m.jpg'
 import {ToastContainer} from 'react-toastify'
 import {handleError, handleSuccess} from '../features/toast/utils'
 
@@ -37,7 +36,7 @@ const NavBar=()=>{
     <nav className='h-[10vh] w-full'>
         <div className='flex'>
           <div className='w-[20%] h-full'>
-            <img src={logo} alt="" className='w-[13vh] h-[10vh]'/>
+            <img src="/images/logom1m.jpg" alt="" className='w-[13vh] h-[10vh]'/>
           </div>
           <div className='flex justify-center items-center text-[1.34rem] font-semibold text-[#122766] gap-10 w-[50%] h-[10vh]'>
             {Nav.map((data,index)=>{

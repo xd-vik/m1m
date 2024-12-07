@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser,faLock,faEnvelope} from '@fortawesome/free-solid-svg-icons';
-import Sign from '../../public/images/SignUp1.png'
+
 import { handleError, handleSuccess } from "../features/toast/utils";
 import { ToastContainer } from "react-toastify";
 
@@ -68,7 +68,7 @@ function SignUp() {
      <div className="bg-blue-100 h-screen w-screen py-1">
       <div className="bg-blue-50 p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center md:items-start max-w-5xl mx-auto sm:my-20 md:my-60 lg:my-40">
           <div className="mb-8 md:mb-0 md:mr-8">
-              <img src={Sign} alt="desk" className="w-full h-auto rounded-lg mt-[10%]" />
+              <img src="/images/SignUp1.png" alt="desk" className="w-full h-auto rounded-lg mt-[10%]" />
           </div>
           <div className="w-full max-w-md">
               <h2 className="text-3xl font-bold mb-6 md:ml-30 ml-32">Signup</h2>
