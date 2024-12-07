@@ -1,8 +1,14 @@
-import { useState } from "react";
+
 import "./App.css";
+import Router from "./React-Router/Router";
 
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello from Frontend!</h1>;
+
+  return (
+    <>
+       <Router />
+    </>
+  );
 }
 
 export default App;
