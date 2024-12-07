@@ -8,7 +8,7 @@
     "upd": "concurrently \"npm run update-backend\" \"npm run update-frontend\" \"npm run root-dev\"",
     "update-backend": "cd server && npm install",
     "update-frontend": "cd client && npm install",
-    "dev":"vite",
+    "dev": "vite",
     "root-dev": "npm install"
   },
   "devDependencies": {
@@ -18,6 +18,7 @@
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.7.1",
     "@fortawesome/react-fontawesome": "^0.2.2",
-    "react-icons": "^5.3.0"
+    "react-icons": "^5.3.0",
+    "react-toastify": "^10.0.6"
   }
 }
