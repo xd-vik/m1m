@@ -30,7 +30,7 @@ const AboutUs = () => {
           <h1 className='text-[3em] w-[40vw] font-semibold text-[#122766] m-6'>Interactive teaching our<br></br> online platforms</h1>
           <div className="relative flex items-center justify-center w-[80%] h-[50vh]">
             <div className="absolute w-[20vw] h-[50vh]">
-              <img src="/man/about.jpg" alt="" className="w-full h-full object-cover"/>
+              <img src="/images/man.jpg" alt="" className="w-full h-full object-cover"/>
             </div>
             <div className="absolute inset-1/2 left-[55vh] top-[10vh] -rotate-30 w-[20vw] h-[50vh]">
               <img src="/images/woman.webp" alt="" className="w-full h-full object-cover"/>

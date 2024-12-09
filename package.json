@@ -8,16 +8,23 @@
     "upd": "concurrently \"npm run update-backend\" \"npm run update-frontend\" \"npm run root-dev\"",
     "update-backend": "cd server && npm install",
     "update-frontend": "cd client && npm install",
-    "dev":"vite",
+    "dev": "vite",
     "root-dev": "npm install"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
     "concurrently": "^7.2.1",
     "vite": "^6.0.2"
   },
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.7.1",
     "@fortawesome/react-fontawesome": "^0.2.2",
-    "react-icons": "^5.3.0"
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.3.0",
+    "react-router-dom": "^7.0.2",
+    "react-toastify": "^10.0.6",
+    "tailwindcss": "^3.4.16"
   }
 }
