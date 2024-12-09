@@ -49,12 +49,12 @@ const NavBar=()=>{
           </div>
           <div className='w-[20%] flex justify-center items-center gap-10 h-[10vh]'>
           
-          { user ? ( <> <button onClick={handleLogout} className='px-5 py-2 rounded-lg text-[1.34rem] text-[#015DFE] border-2 border-[#015DFE] font-semibold hover:bg-blue-700 hover:text-white'>Logout</button>
+          { user ? ( <> <button onClick={handleLogout} className='px-5 py-2 rounded-lg text-[1.2rem] text-[#015DFE] border-2 border-[#015DFE] font-semibold hover:bg-blue-700 hover:text-white'>Logout</button>
                         <h3>{user}</h3>
              </> ) : ( <> <button onClick={()=>{
               navigate('/signup')
-            }} className='px-5 py-2 rounded-lg text-[1.34rem] text-[#015DFE] border-2 border-[#015DFE] font-semibold hover:bg-blue-700 hover:text-white'>Sign-Up</button>
-            <Link to='/Login' className='px-5 py-2 text-[1.34rem] bg-[#015DFE] text-white rounded-lg font-semibold hover:bg-blue-700'>Login</Link> </> )
+            }} className='px-5 py-2 rounded-lg text-[1.2rem] text-[#015DFE] border-2 border-[#015DFE] font-semibold hover:bg-blue-700 hover:text-white'>Sign-Up</button>
+            <Link to='/Login' className='px-5 py-2 text-[1.2rem] bg-[#015DFE] text-white rounded-lg font-semibold hover:bg-blue-700'>Login</Link> </> )
               }
               <ToastContainer/>
           </div>
