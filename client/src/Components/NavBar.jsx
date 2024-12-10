@@ -1,67 +1,116 @@
-import React, { useEffect } from 'react';
-import { Link, Route, useNavigate } from 'react-router-dom';
-import logo from '../../public/images/logom1m.jpg'
-import {ToastContainer} from 'react-toastify'
-import {handleError, handleSuccess} from '../features/toast/utils'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import logo from '../../public/images/logom1m.jpg';
 
-
-const Nav=[
+const Nav = [
   {
-    title:"Home",
-    route:"/"
+    title: "Home",
+    route: "/"
   },
   {
-    title:"About",
-    route:"/about"
+    title: "About",
+    route: "/about"
   },
   {
-    title:"Courses",
-    route:"/courses"
+    title: "Courses",
+    route: "/courses"
   },
   {
-    title:"Contact Us",
-    route:"/contact"
+    title: "Contact Us",
+    route: "/contact"
   }
-]
-const NavBar=()=>{
-  const navigate = useNavigate();
-  const handleLogout=()=>{
-    localStorage.removeItem('token')
-    localStorage.removeItem('loggedInUser')
-    handleSuccess("logout successfully ")
-    navigate('/')
-  }
+];
 
-  const user = localStorage.getItem('loggedInUser')
-    return(
-    <nav className='h-[10vh] w-full'>
-        <div className='flex'>
-          <div className='w-[20%] h-full'>
-            <img src={logo} alt="" className='w-[13vh] h-[10vh]'/>
-          </div>
-          <div className='flex justify-center items-center text-[1.34rem] font-semibold text-[#122766] gap-10 w-[50%] h-[10vh]'>
-            {Nav.map((data,index)=>{
-              return(
-                <Link className='p-5 m-2' to={data.route}>
-                <h1 className='hover:text-blue-500 hover:underline hover:underline-offset-8'>{data.title}</h1>
-                </Link>
-              )
-            })}
-          </div>
-          <div className='w-[20%] flex justify-center items-center gap-10 h-[10vh]'>
-          
-          { user ? ( <> <button onClick={handleLogout} className='px-5 py-2 rounded-lg text-[1.34rem] text-[#015DFE] border-2 border-[#015DFE] font-semibold hover:bg-blue-700 hover:text-white'>Logout</button>
-                        <h3>{user}</h3>
-             </> ) : ( <> <button onClick={()=>{
-              navigate('/signup')
-            }} className='px-5 py-2 rounded-lg text-[1.34rem] text-[#015DFE] border-2 border-[#015DFE] font-semibold hover:bg-blue-700 hover:text-white'>Sign-Up</button>
-            <Link to='/Login' className='px-5 py-2 text-[1.34rem] bg-[#015DFE] text-white rounded-lg font-semibold hover:bg-blue-700'>Login</Link> </> )
-              }
-              <ToastContainer/>
+const NavBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  return (
+    <nav className="w-full h-[10vh]">
+      {/* Main navigation container */}
+      <div className="flex justify-between items-center h-full px-6 sm:px-8 md:px-12 lg:px-16">
+        {/* Logo */}
+        <div className="w-[20%] sm:w-[15%] flex items-center justify-start">
+          <img src={logo} alt="Logo" className="h-[40px] sm:h-[50px] object-contain" />
+        </div>
+
+        {/* Navigation Links for larger screens */}
+        <div className="hidden sm:flex justify-center items-center gap-8 md:gap-10 lg:gap-12 xl:gap-14 w-auto ml-4">
+          {Nav.map((data, index) => (
+            <Link
+              key={index}
+              className="text-[1rem] sm:text-[1.2rem] md:text-[1.34rem] font-semibold text-[#122766] hover:text-blue-500 hover:underline hover:underline-offset-8 p-3"
+              to={data.route}
+            >
+              {data.title}
+            </Link>
+          ))}
+        </div>
+
+        {/* Sign-in and Login buttons for larger screens */}
+        <div className="hidden sm:flex gap-6 w-auto justify-center ml-4">
+          <Link
+            to="/SignUp"
+            className="px-6 py-2 text-[1rem] sm:text-[1.2rem] md:text-[1.34rem] rounded-lg text-[#015DFE] border-2 border-[#015DFE] font-semibold hover:bg-blue-700 hover:text-white"
+          >
+            Sign-up
+          </Link>
+          <Link
+            to="/Login"
+            className="px-6 py-2 text-[1rem] sm:text-[1.2rem] md:text-[1.34rem] bg-[#015DFE] text-white rounded-lg font-semibold hover:bg-blue-700"
+          >
+            Login
+          </Link>
+        </div>
+
+        {/* Mobile Hamburger Icon */}
+        <div className="sm:hidden flex items-center justify-center">
+          <button onClick={toggleMenu} className="text-[#015DFE] text-2xl">
+            <i className={isMenuOpen ? 'ri-close-line' : 'ri-menu-2-line'}></i>
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu (Dropdown) */}
+      <div className={`sm:hidden ${isMenuOpen ? 'block' : 'hidden'} bg-white shadow-lg absolute top-[10vh] left-0 right-0 z-10`}>
+        <div className="flex flex-col items-center py-6 gap-4">
+          {Nav.map((data, index) => (
+            <Link
+              key={index}
+              className="p-4 text-xl text-[#122766] hover:text-blue-500 hover:underline"
+              to={data.route}
+              onClick={closeMenu}
+            >
+              {data.title}
+            </Link>
+          ))}
+          <div className="p-4 flex flex-col gap-4">
+            <Link
+              to="/SignUp"
+              className="block text-[#015DFE] border-2 border-[#015DFE] px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 hover:text-white"
+              onClick={closeMenu}
+            >
+              Sign-up
+            </Link>
+            <Link
+              to="/Login"
+              className="block text-white bg-[#015DFE] px-6 py-2 rounded-lg font-semibold hover:bg-blue-700"
+              onClick={closeMenu}
+            >
+              Login
+            </Link>
           </div>
         </div>
-      </nav>
-      )}
+      </div>
+    </nav>
+  );
+};
 
-      export default NavBar;
-
+export default NavBar;

@@ -1,77 +1,81 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import animation from '../../public/images/animation.jpg'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const EnrollData=[
+const EnrollData = [
     {
-        title:'Animation',
-        image:'images/animation.jpg',
-        cost:'$140',
-        duration:'4 months',
-        videos:'140 live videos'
+        title: 'Animation',
+        image: '/images/animation.jpg',
+        cost: '$140',
+        duration: '4 months',
+        videos: '140 live videos',
     },
     {
-        title:'Animation',
-        image:'images/animation.jpg',
-        cost:'$100',
-        duration:'3.5 months',
-        videos:'180 live videos'
+        title: 'Animation',
+        image: '/images/animation.jpg',
+        cost: '$100',
+        duration: '3.5 months',
+        videos: '180 live videos',
     },
     {
-        title:'Animation',
-        image:'images/animation.jpg',
-        cost:'$220',
-        duration:'4 months',
-        videos:'200 live videos'
-    }
-]
+        title: 'Animation',
+        image: '/images/animation.jpg',
+        cost: '$220',
+        duration: '4 months',
+        videos: '200 live videos',
+    },
+];
 
-const EnrollCard=({data,index})=>{
-    return(
-        <Link>
-    <div className='w-[30vw] h-[90%] shadow-lg rounded-lg flex flex-col' key={index}>
-            <div className='w-full h-[32vh]'>
-                <img src={data.image} alt="" className='h-full w-full rounded-lg'/>
-            </div>
-            <div className='h-[28vh] w-full flex flex-col flex-wrap items-center gap-5'>
-                <div className='h-[8.5vh] w-[28vh]'>
-                    <h1 className='text-[1.25em] m-2 hover:scale-90 transition duration-150 ease-in-ease-out'> <i class="ri-play-circle-fill text-[#596894] text-[1.8rem]"></i>{data.videos}</h1>
-                </div>
-                <div className='h-[8.5vh] w-[28vh]'>
-                    <h1 className='text-[1.25em] m-2 hover:scale-90 transition duration-150 ease-in-ease-out'><i class="ri-timer-2-fill text-[#596894] text-[1.8rem] mr-2"></i>{data.duration}</h1>
-                </div>
-                <div className='h-[8.5vh] w-[28vh]'>
-                    <h1 className='text-[1.25em] m-2 hover:scale-90 transition duration-150 ease-in-ease-out'><i class="ri-money-dollar-circle-line text-[#596894] text-[1.8rem] mr-2"></i>Cost:{data.cost}</h1>
-                </div>
-                <div className='h-[8.5vh] w-[28vh] flex items-start justify-start'>
-                    <button className='px-4 hover:bg-blue-500 hover:text-white py-2 mx-2 text-[1.2em] border-2 rounded-lg border-[#cccccc] text-blue-500'>Enroll Now</button>
-                </div>
-            </div>
-        </div>
-    </Link>
-    )
-}
-
-const Enroll=()=>{
+const EnrollCard = ({ data }) => {
     return (
-        <div className='min-h-screen w-full'>
-            <h1 className='text-[3em] text-center font-semibold text-[#122766]'>Enroll Your Favourite Course</h1>
-            <div className='h-[8vh] w-full flex gap-10 items-center justify-center mt-5'>
-                {['All Courses','Photography','Animation','Development','Design/Art'].map((courses,index)=>{
-                    return(
-                    <button className='px-6 hover:bg-blue-500 hover:text-white py-2 mx-2 text-[1.2em] border-2 rounded-lg border-[#cccccc] text-blue-500' key={index}>{courses}</button>
-                    )
-                })}
+        <Link>
+            <div className="min-w-[280px] max-w-[320px] h-auto shadow-lg rounded-lg flex flex-col m-3 lg:m-2">
+                <div className="w-full h-48">
+                    <img src={data.image} alt={data.title} className="h-full w-full object-cover rounded-t-lg" />
+                </div>
+                <div className="p-4 flex flex-col items-center">
+                    <h1 className="text-lg font-medium my-2 hover:scale-105 transition-transform duration-150 ease-in-out">
+                        <i className="ri-play-circle-fill text-[#596894] text-xl"></i> {data.videos}
+                    </h1>
+                    <h1 className="text-lg font-medium my-2 hover:scale-105 transition-transform duration-150 ease-in-out">
+                        <i className="ri-timer-2-fill text-[#596894] text-xl mr-2"></i> {data.duration}
+                    </h1>
+                    <h1 className="text-lg font-medium my-2 hover:scale-105 transition-transform duration-150 ease-in-out">
+                        <i className="ri-money-dollar-circle-line text-[#596894] text-xl mr-2"></i> Cost: {data.cost}
+                    </h1>
+                    <button className="px-4 py-2 mt-4 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition">
+                        Enroll Now
+                    </button>
+                </div>
             </div>
-            <div className='w-full h-[60vh] mt-10 flex flex-wrap items-center justify-around'>
-                {EnrollData.map((data,index)=>{
-                    return(
-                        <EnrollCard data={data} key={index}/>
-                    )
-                })}
+        </Link>
+    );
+};
+
+const Enroll = () => {
+    return (
+        <div className="min-h-screen w-full px-4">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl text-center font-semibold text-[#122766] my-6">
+                Enroll Your Favourite Course
+            </h1>
+            <div className="w-full max-w-[1280px] mx-auto flex justify-around flex-wrap gap-3 lg:gap-6 mb-6">
+                {['All Courses', 'Photography', 'Animation', 'Development', 'Design/Art'].map((course, index) => (
+                    <button
+                        className="px-6 py-2 text-sm sm:text-base lg:text-lg border border-gray-300 rounded-lg text-blue-500 hover:bg-blue-500 hover:text-white transition"
+                        key={index}
+                    >
+                        {course}
+                    </button>
+                ))}
+            </div>
+            <div className="w-full overflow-x-auto">
+                <div className="flex justify-between items-center gap-6 px-6 lg:px-10 flex-nowrap">
+                    {EnrollData.map((data, index) => (
+                        <EnrollCard data={data} key={index} />
+                    ))}
+                </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Enroll;
