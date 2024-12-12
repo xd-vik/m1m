@@ -7,7 +7,7 @@ const UserSchema = new mongoose.Schema({
   role: {
     type: String,
     enum: ["student", "instructor", "admin"],
-    required: true,
+    required: false,
   },
   profile_picture: { type: String },
   created_at: { type: Date, default: Date.now },
