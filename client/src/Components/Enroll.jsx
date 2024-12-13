@@ -28,21 +28,21 @@ const EnrollData = [
 const EnrollCard = ({ data }) => {
     return (
         <Link>
-            <div className="min-w-[280px] max-w-[320px] h-auto shadow-lg rounded-lg flex flex-col m-3 lg:m-2">
+            <div className="w-[55vh] h-[45vh] shadow-lg rounded-lg flex flex-col m-3 lg:m-2">
                 <div className="w-full h-48">
                     <img src={data.image} alt={data.title} className="h-full w-full object-cover rounded-t-lg" />
                 </div>
-                <div className="p-4 flex flex-col items-center">
-                    <h1 className="text-lg font-medium my-2 hover:scale-105 transition-transform duration-150 ease-in-out">
+                <div className="flex flex-wrap justify-center items-center">
+                    <h1 className="text-lg font-medium m-2 h-[5vh] w-[24vh] text-center hover:scale-105 transition-transform duration-150 ease-in-out">
                         <i className="ri-play-circle-fill text-[#596894] text-xl"></i> {data.videos}
                     </h1>
-                    <h1 className="text-lg font-medium my-2 hover:scale-105 transition-transform duration-150 ease-in-out">
+                    <h1 className="text-lg font-medium m-2 h-[5vh] w-[24vh] text-center hover:scale-105 transition-transform duration-150 ease-in-out">
                         <i className="ri-timer-2-fill text-[#596894] text-xl mr-2"></i> {data.duration}
                     </h1>
-                    <h1 className="text-lg font-medium my-2 hover:scale-105 transition-transform duration-150 ease-in-out">
+                    <h1 className="text-lg font-medium m-2 h-[5vh] w-[24vh] text-center hover:scale-105 transition-transform duration-150 ease-in-out">
                         <i className="ri-money-dollar-circle-line text-[#596894] text-xl mr-2"></i> Cost: {data.cost}
                     </h1>
-                    <button className="px-4 py-2 mt-4 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition">
+                    <button className="px-4 py-2 m-2 h-[5vh] w-[24vh] text-center bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition">
                         Enroll Now
                     </button>
                 </div>

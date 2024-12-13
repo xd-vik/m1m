@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser,faLock,faEnvelope} from '@fortawesome/free-solid-svg-icons';
-import Sign from '../../public/images/SignUp1.png'
+import Sign from '/images/SignUp1.png'
 import { handleError, handleSuccess } from "../features/toast/utils";
 import { ToastContainer } from "react-toastify";
 

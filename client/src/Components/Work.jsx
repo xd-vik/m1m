@@ -1,10 +1,6 @@
 import React from 'react';
 import Card from './Card';
 import ChooseCard from './ChooseCard';
-import girlLaptop from '../../public/images/girlLaptop.jpg'
-import enroll from '../../public/images/enroll.webp'
-import boyLaptop from '../../public/images/boyLaptop.webp'
-import money from '../../public/images/money.webp'
 const WorkData=[
     {
         title:'1.Choose Your Course',

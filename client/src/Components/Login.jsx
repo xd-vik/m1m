@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Picture from '../../public/images/LoginPic.png'
+import Picture from '/images/LoginPic.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser,faLock} from '@fortawesome/free-solid-svg-icons';
 import { ToastContainer } from "react-toastify";

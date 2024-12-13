@@ -1,7 +1,7 @@
 import React from "react";
-import about from "../../public/images/about.jpg";
-import man from "../../public/images/man.jpg";
-import woman from "../../public/images/woman.webp";
+import about from "/images/about.jpg";
+import man from "/images/man.jpg";
+import woman from "/images/woman.webp";
 
 const aboutData=[
   {
