@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../public/images/logom1m.jpg';
+import logo from '/images/logom1m.jpg';
 
 const Nav = [
   {
@@ -35,7 +35,7 @@ const NavBar = () => {
   return (
     <nav className="w-full h-[10vh]">
       {/* Main navigation container */}
-      <div className="flex justify-between items-center h-full px-6">
+      <div className="flex justify-between items-center h-full px-6 sm:px-8 md:px-12 lg:px-16">
         {/* Logo */}
         <div className="w-[20%] sm:w-[15%] flex items-center justify-start">
           <img src={logo} alt="Logo" className="h-[40px] sm:h-[50px] object-contain" />
@@ -79,29 +79,29 @@ const NavBar = () => {
       </div>
 
       {/* Mobile Menu (Dropdown) */}
-      <div className={`sm:hidden ${isMenuOpen ? 'block' : 'hidden'} bg-white shadow-lg absolute top-[12vh] left-0 right-0 z-10 p-4`}>
-        <div className="flex flex-col items-center gap-4">
+      <div className={`sm:hidden ${isMenuOpen ? 'block' : 'hidden'} bg-white shadow-lg absolute top-[10vh] left-0 right-0 z-10`}>
+        <div className="flex flex-col items-center py-6 gap-4">
           {Nav.map((data, index) => (
             <Link
               key={index}
-              className="p-2 text-xl text-[#122766] hover:text-blue-500 hover:underline"
+              className="p-4 text-xl text-[#122766] hover:text-blue-500 hover:underline"
               to={data.route}
               onClick={closeMenu}
             >
               {data.title}
             </Link>
           ))}
-          <div className="flex flex-col gap-4 w-full">
+          <div className="p-4 flex flex-col gap-4">
             <Link
               to="/SignUp"
-              className="block text-[#015DFE] border-2 border-[#015DFE] px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 hover:text-white"
+              className="block text-[#015DFE] border-2 border-[#015DFE] px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 hover:text-white"
               onClick={closeMenu}
             >
               Sign-up
             </Link>
             <Link
               to="/Login"
-              className="block text-white bg-[#015DFE] px-4 py-2 rounded-lg font-semibold hover:bg-blue-700"
+              className="block text-white bg-[#015DFE] px-6 py-2 rounded-lg font-semibold hover:bg-blue-700"
               onClick={closeMenu}
             >
               Login
