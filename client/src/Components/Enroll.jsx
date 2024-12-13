@@ -32,9 +32,9 @@ const EnrollCard = ({ data }) => {
                 <div className="w-full h-48">
                     <img src={data.image} alt={data.title} className="h-full w-full object-cover rounded-t-lg" />
                 </div>
-                <div className="p-4 flex flex-col items-start">
+                <div className="p-4 flex flex-col items-center">
                     <h1 className="text-lg font-medium my-2 hover:scale-105 transition-transform duration-150 ease-in-out">
-                        <i className="ri-play-circle-fill text-[#596894] text-xl mr-2"></i> {data.videos}
+                        <i className="ri-play-circle-fill text-[#596894] text-xl"></i> {data.videos}
                     </h1>
                     <h1 className="text-lg font-medium my-2 hover:scale-105 transition-transform duration-150 ease-in-out">
                         <i className="ri-timer-2-fill text-[#596894] text-xl mr-2"></i> {data.duration}
@@ -42,7 +42,7 @@ const EnrollCard = ({ data }) => {
                     <h1 className="text-lg font-medium my-2 hover:scale-105 transition-transform duration-150 ease-in-out">
                         <i className="ri-money-dollar-circle-line text-[#596894] text-xl mr-2"></i> Cost: {data.cost}
                     </h1>
-                    <button className="w-full bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button className="px-4 py-2 mt-4 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition">
                         Enroll Now
                     </button>
                 </div>
@@ -50,7 +50,6 @@ const EnrollCard = ({ data }) => {
         </Link>
     );
 };
-
 
 const Enroll = () => {
     return (

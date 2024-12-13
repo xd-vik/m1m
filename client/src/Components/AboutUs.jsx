@@ -3,98 +3,63 @@ import about from "../../public/images/about.jpg";
 import man from "../../public/images/man.jpg";
 import woman from "../../public/images/woman.webp";
 
-const aboutData = [
+const aboutData=[
   {
-    title: "Everyday Complete Worksheet",
-    description: "We create understanding and engagement among our students, enhancing comprehension.",
+   title:"Everyday complete worksheet",
+   description:"We create understand engagement among our student and comprehension"
   },
   {
-    title: "Online Group Discussions",
-    description: "Individual involvement and teamwork engagement are key components.",
-  },
-  {
-    title: "Learning Outcome",
-    description: "Performance is showcased using statistics to understand individual improvement.",
-  },
-];
-
+    title:"Online Group Discussions",
+    description:"Individual involvement and the engagement with the team"
+   },
+   {
+    title:"Learning Outcome",
+    description:"Performance of the individual is showcased helping understand improvement using statistics"
+   }
+]
 const AboutUs = () => {
   return (
-    <div className="w-full">
-
-      <div className="w-full h-[50vh] sm:h-[60vh]">
-        <img
-          src={about}
-          alt="About Us Background"
-          className="w-full h-full object-cover"
-        />
+    <>
+    <div className='min-h-screen flex flex-col items-center justify-center w-full'>
+      <div className='bg-red-300 w-full h-[60vh]'>
+        <img src={about} alt="" className="h-full w-full object-cover"/>
       </div>
-
-
-      <div className="text-center py-8 px-6 sm:px-12">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#122766]">
-          About Us
-        </h1>
+      <div className="h-[40vh] w-[90vw] m-2">
+        <h1 className='text-[3.5em] font-semibold text-[#122766]'>About Us</h1>
+        <p className='text-[1em] pt-2 w-[80%]'>Welcome to Mission One million, where learning is not just about gaining knowledge—it's about ensuring you succeed and invest in yourself without the risk. Our unique approach combines the power of education with a commitment to your success. Here's how it works:</p>
+        <p className='text-[1em] pt-2 w-[80%]'>At Mission One million, we offer a wide range of expert-led courses designed to help you acquire new skills, boost your career, or pursue a personal passion. What sets us apart is our belief in making learning truly rewarding. When you enroll in one of our courses, you're not just paying for a chance to learn—you’re investing in your future.</p>
       </div>
-
-  
-      <div className="px-6 sm:px-12 md:px-16 lg:px-24 py-8">
-        <p className="text-base sm:text-lg lg:text-xl text-[#333] mb-6 leading-relaxed">
-          Welcome to Mission One Million, where learning is not just about
-          gaining knowledge—it's about ensuring you succeed and invest in
-          yourself without risk. Our unique approach combines the power of
-          education with a commitment to your success.
-        </p>
-        <p className="text-base sm:text-lg lg:text-xl text-[#333] leading-relaxed">
-          At Mission One Million, we offer a wide range of expert-led courses
-          designed to help you acquire new skills, boost your career, or pursue
-          a personal passion. What sets us apart is our belief in making
-          learning truly rewarding.
-        </p>
-      </div>
-
-   
-      <div className="flex flex-col lg:flex-row items-center lg:justify-between px-6 sm:px-12 md:px-16 lg:px-24 py-16">
-
-        <div className="w-full lg:w-[60%] mb-8 lg:mb-0">
-          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#122766] mb-6">
-            Interactive Teaching on Our Online Platforms
-          </h3>
-          <div className="relative flex justify-center lg:justify-start">
-            <div className="relative w-[60%] h-[300px] sm:h-[400px]">
-              <img
-                src={man}
-                alt="Man teaching online"
-                className="absolute top-0 left-0 w-full h-full object-cover"
-              />
+      <div className="min-h-screen w-full flex">
+        <div className="w-[60vw] h-[100vh] flex flex-col items-center">
+          <h1 className='text-[3em] w-[40vw] font-semibold text-[#122766] m-6'>Interactive teaching our<br></br> online platforms</h1>
+          <div className="relative flex items-center justify-center w-[80%] h-[50vh]">
+            <div className="absolute w-[20vw] h-[50vh]">
+              <img src={man} alt="" className="w-full h-full object-cover"/>
             </div>
-            <div className="relative w-[50%] h-[250px] sm:h-[300px] lg:h-[350px] lg:-ml-20 -rotate-6">
-              <img
-                src={woman}
-                alt="Woman learning online"
-                className="absolute top-0 left-0 w-full h-full object-cover"
-              />
+            <div className="absolute inset-1/2 left-[55vh] top-[10vh] -rotate-30 w-[20vw] h-[50vh]">
+              <img src={woman} alt="" className="w-full h-full object-cover"/>
             </div>
           </div>
         </div>
-
-   
-        <div className="w-full lg:w-[40%]">
-          {aboutData.map((data, index) => (
-            <div key={index} className="mb-8">
-              <h4 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-[#122766] flex items-center">
-                <i className="ri-checkbox-circle-line text-2xl sm:text-3xl lg:text-4xl text-blue-500 mr-2"></i>
-                {data.title}
-              </h4>
-              <p className="text-base sm:text-lg lg:text-xl text-[#333] mt-2 leading-relaxed">
-                {data.description}
-              </p>
-            </div>
-          ))}
+        <div className="w-[40vw] flex items-center justify-center h-[100vh]">
+          <div className="w-full h-[60vh]">
+            {aboutData.map((data,index)=>{
+              return(
+                <>
+                  <h1 className='text-[2em] font-semibold text-[#122766] mt-8 hover:text-blue-500'>
+                    <i class="ri-checkbox-circle-line text-[2.3rem] font-light mx-2"></i>
+                    {data.title}
+                  </h1>
+                  <p className="text-[1.25em] leading-1 text-[#122766] mx-12 w-[80%]">{data.description}</p>
+                </>
+              )
+            })}
+          </div>
         </div>
       </div>
     </div>
-  );
+    </>
+  )  // Link component to navigate to '/about' route
 };
 
 export default AboutUs;
