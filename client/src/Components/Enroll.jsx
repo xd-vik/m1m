@@ -42,7 +42,7 @@ const EnrollCard = ({ data }) => {
                     <h1 className="text-lg font-medium m-2 h-[5vh] w-[24vh] hover:scale-105 transition-transform duration-150 ease-in-out">
                         <i className="ri-money-dollar-circle-line text-[#596894] text-xl"></i> Cost: {data.cost}
                     </h1>
-                    <button className=" h-[6vh] w-[24vh] text-center bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition">
+                    <button className=" h-[6vh] w-[24vh] text-center font-semibold border-blue-500 border-2 text-blue-500 rounded-lg shadow hover:bg-blue-600 hover:text-white transition">
                         Enroll Now
                     </button>
                 </div>
