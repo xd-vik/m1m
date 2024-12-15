@@ -5,15 +5,11 @@ const Hero=()=>{
         <>
         <div className='w-full h-[90vh] flex'>
         <div className='lg:h-full lg:w-[65%] md:h-[80%] md:w-[60%] w-[70%] h-[60%] flex items-center justify-center'>
-          <div className='lg:w-[60vw] lg:h-[70vh] lg:p-5 md:w-[58vw] md:h-[65vh] md:p-3 p-1'>
-            <h1 className='lg:text-[3.5em] md:text-[2.3em] text-[0.9em] font-semibold text-[#122766] '>Mission One <br></br> Million:Empowering Growth and Learning</h1>
-            <p className='lg:text-[1.2em] md:text-[0.9em] text-[0.4em] pt-2'>Mission One Million offers a comprehensive suite of tools and resources that deliver a dynamic and engaging learning experience.</p>
+          <div className='lg:w-[60vw] lg:h-[70vh] lg:p-10 md:w-[58vw] md:h-[65vh] md:p-3 p-1'>
+            <h1 className='lg:text-[3.5em] md:text-[2.3em] text-[0.9em] font-semibold text-[#122766] '>Mission One Million:<br></br>Empowering Growth and Learning</h1>
+            <p className='lg:text-[1em] md:text-[0.9em] text-[0.4em] pt-2'>The M1M project appears to combine education and financial rewards to incentivize learning. Users can buy courses to gain knowledge or skills, and upon successful completion of these courses, they are refunded the money they initially spent. This approach ensures learners stay motivated to complete the course, making it an engaging educational and financial ecosystem.</p>
             <div className='my-5'>
-              <form action="">
-                <input type='email' placeholder='Enter Email' name='email' className='lg:px-8 md:px-3 border-2 outline-none border-[#015DFE] py-1 lg:py-2 rounded-lg lg:text-[1.34rem] md:text-[0.9em] text-[0.4rem]'></input>
-                <button className='lg:px-5 md:px-3 lg:py-2 px-2 py-1 rounded-lg hover:bg-blue-800 lg:text-[1.34rem] text-[0.4rem] bg-[#015DFE] text-white border-2 border-[#015DFE] font-semibold md:text-[0.9em]'>Trial</button>
-              </form>
-              <button className='lg:px-5 md:px-3 px-2 py-1 lg:mt-8 mt-4 rounded-lg hover:bg-blue-800 lg:text-[1.34rem] md:text-[0.9rem] text-[0.4rem] bg-[#015DFE] text-white border-2 border-[#015DFE] font-semibold md:text-[0.9em]'>Explore</button>
+              <button className='lg:px-5 md:px-3 px-2 py-1 lg:mt-6 mt-2 rounded-lg hover:bg-blue-800 lg:text-[1.34rem] md:text-[0.9rem] text-[0.4rem] bg-[#015DFE] text-white border-2 border-[#015DFE] font-semibold md:text-[0.9em]'>Explore</button>
             </div>
           </div>
         </div>

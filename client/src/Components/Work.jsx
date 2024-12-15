@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from './Card';
-import ChooseCard from './ChooseCard';
 const WorkData=[
     {
         title:'1.Choose Your Course',
@@ -23,35 +22,12 @@ const WorkData=[
         image:'/images/money.webp',
     }
 ]
-
-const ChooseData=[
-    {
-        title:'Risk-Free Learning',
-        image:'/images/Risk.png',
-    },
-    {
-        title:'Quality Content',
-        image:'/images/Quality.png',
-    },
-    {
-        title:'Flexible Learning',
-        image:'/images/Flexible.png',
-    },
-    {
-        title:'No Hidden Fees ',
-        image:'/images/NoHidden.png',
-    },
-    {
-        title:'Empowering You ',
-        image:'/images/Quality.png',
-    }
-]
 const Work=()=>{
     return(
         <>
-        <div className='min-h-screen w-full '>
+        <div className='w-full'>
             <div className='flex items-center justify-center'>
-                <div className='w-[90%] h-[60vh]'>
+                <div className='w-[90%] h-[50vh]'>
                     <h1 className='text-[3.5em] font-semibold text-[#122766]'>How it Works?</h1>
                     <div className='w-full flex flex-wrap justify-around h-[45vh] py-1'>
                         {WorkData.map((data,index)=>{
@@ -60,18 +36,6 @@ const Work=()=>{
                             )
                         })}
                     </div>
-                </div>
-            </div>
-
-        <div className='p-8'>
-
-                <h1 className='text-[3.5em] font-semibold text-[#122766]'>Why Choose Us?</h1>
-                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4'>
-                    {ChooseData.map((data,index)=>{
-                        return(
-                            <ChooseCard data={data} key={index}/>
-                        )
-                    })}
                 </div>
             </div>
         </div>
