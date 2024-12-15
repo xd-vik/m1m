@@ -24,7 +24,7 @@ const AboutUs = () => {
     <div className='min-h-screen flex flex-col items-center justify-center w-full'>
       <div className="min-h-screen w-full flex">
         <div className="w-[60vw] h-[100vh] flex flex-col items-center">
-          <h1 className='text-[2.7em] w-[50vw] bg-red-100 font-semibold text-[#122766] m-6'>Your Path to Knowledge, Where Completion Pays You Back</h1>
+          <h1 className='text-[2.7em] w-[50vw] font-semibold text-[#122766] m-6'>Your Path to Knowledge, Where Completion Pays You Back</h1>
           <div className="relative flex items-center justify-center w-[80%] h-[50vh]">
             <div className="absolute w-[35vw] mt-2 h-[40vh]">
               <img src={woman} alt="" className="w-full h-full object-contain"/>
