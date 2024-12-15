@@ -53,11 +53,11 @@ const EnrollCard = ({ data }) => {
 
 const Enroll = () => {
     return (
-        <div className="min-h-screen w-full px-4">
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl text-center font-semibold text-[#122766] my-6">
+        <div className="w-full px-10 my-20">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl text-center font-semibold text-[#122766] my-10">
                 Enroll Your Favourite Course
             </h1>
-            <div className="w-full max-w-[1280px] mx-auto flex justify-around flex-wrap gap-3 lg:gap-6 mb-6">
+            <div className="w-full mx-auto flex justify-center items-center gap-[8vh] flex-wrap mb-6">
                 {['All Courses', 'Photography', 'Animation', 'Development', 'Design/Art'].map((course, index) => (
                     <button
                         className="px-6 py-2 text-sm sm:text-base lg:text-lg border border-gray-300 rounded-lg text-blue-500 hover:bg-blue-500 hover:text-white transition"
@@ -67,7 +67,7 @@ const Enroll = () => {
                     </button>
                 ))}
             </div>
-            <div className="w-full overflow-x-auto">
+            <div className="w-full h-[50vh] overflow-x-auto">
                 <div className="flex justify-between items-center gap-6 px-6 lg:px-10 flex-nowrap">
                     {EnrollData.map((data, index) => (
                         <EnrollCard data={data} key={index} />
