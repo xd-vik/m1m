@@ -33,20 +33,20 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="w-full h-[10vh]">
+    <nav className="w-full h-[10vh] gap-6">
       {/* Main navigation container */}
-      <div className="flex justify-between items-center h-full px-6 sm:px-8 md:px-12 lg:px-16">
+      <div className="flex justify-between items-center h-full px-6 sm:px-8 md:px-12 lg:px-10">
         {/* Logo */}
         <div className="w-[20%] sm:w-[15%] flex items-center justify-start">
-          <img src={logo} alt="Logo" className="h-[40px] sm:h-[50px] object-contain" />
+          <img src={logo} alt="Logo" className="h-[15vh] object-contain" />
         </div>
 
         {/* Navigation Links for larger screens */}
-        <div className="hidden sm:flex justify-center items-center gap-8 md:gap-10 lg:gap-12 xl:gap-14 w-auto ml-4">
+        <div className="hidden sm:flex justify-center items-center gap-5 md:gap-5 lg:gap-8 xl:gap-14 w-auto">
           {Nav.map((data, index) => (
             <Link
               key={index}
-              className="text-[1rem] sm:text-[1.2rem] md:text-[1.34rem] font-semibold text-[#122766] hover:text-blue-500 hover:underline hover:underline-offset-8 p-3"
+              className="lg:text-[1.3rem] sm:text-[0.80rem] md:text-[0.85rem] font-semibold text-[#122766] hover:text-blue-500 hover:underline hover:underline-offset-8 p-3"
               to={data.route}
             >
               {data.title}
@@ -55,16 +55,16 @@ const NavBar = () => {
         </div>
 
         {/* Sign-in and Login buttons for larger screens */}
-        <div className="hidden sm:flex gap-6 w-auto justify-center ml-4">
+        <div className="hidden sm:flex gap-6 w-auto justify-center">
           <Link
             to="/SignUp"
-            className="px-6 py-2 text-[1rem] sm:text-[1.2rem] md:text-[1.34rem] rounded-lg text-[#015DFE] border-2 border-[#015DFE] font-semibold hover:bg-blue-700 hover:text-white"
+            className="px-4 py-2 lg:text-[1.3rem] sm:text-[0.80rem] md:text-[0.85rem] rounded-lg text-[#015DFE] border-2 border-[#015DFE] font-semibold hover:bg-blue-700 hover:text-white"
           >
             Sign-up
           </Link>
           <Link
             to="/Login"
-            className="px-6 py-2 text-[1rem] sm:text-[1.2rem] md:text-[1.34rem] bg-[#015DFE] text-white rounded-lg font-semibold hover:bg-blue-700"
+            className="px-4 py-2 lg:text-[1.3rem] sm:text-[0.80rem] md:text-[0.85rem] bg-[#015DFE] text-white rounded-lg font-semibold hover:bg-blue-700"
           >
             Login
           </Link>
