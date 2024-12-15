@@ -17,7 +17,7 @@ const Hero=()=>{
             </div>
           </div>
         </div>
-        <div className='relative lg:h-full lg:w-[40%] md:w-[50%] md:h-[80%] h-[40vh] w-[40%] bg-red-100 overflow-hidden'>
+        <div className='relative lg:h-full lg:w-[40%] md:w-[50%] md:h-[80%] h-[40vh] w-[40%] overflow-hidden'>
           <div className='absolute bg-[#122766] lg:h-[45vh] lg:w-[45vh] md:h-[36vh] md:w-[36vh] h-[20vh] w-[20vh] rounded-[50%] left-[60%] top-[25%]'>
             <h1 className='absolute lg:text-[2.3em] md:text-[1.3em] text-[0.52rem] font-semibold text-white left-[15%] top-[33%]'>Our<br></br> Mission</h1>
             <div className='absolute lg:h-[18vh] lg:w-[18vh] rounded-[50%] bg-white -top-[40%] md:h-[15vh] md:w-[15vh] h-[8vh] w-[8vh] border-[#122766] border-2'>
