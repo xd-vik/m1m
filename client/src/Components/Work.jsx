@@ -53,7 +53,7 @@ const Work=()=>{
             <div className='flex items-center justify-center'>
                 <div className='w-[90%] h-[60vh]'>
                     <h1 className='text-[3.5em] font-semibold text-[#122766]'>How it Works?</h1>
-                    <div className='w-full flex flex-wrap justify-between h-[45vh] py-1'>
+                    <div className='w-full flex flex-wrap justify-around h-[45vh] py-1'>
                         {WorkData.map((data,index)=>{
                             return(
                                 <Card data={data} key={index}/>
